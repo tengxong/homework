@@ -1,0 +1,44 @@
+/* src/ResponsiveContainer.css */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.Text{
+    display: grid;
+    width: 200px;
+    height: 200px;
+    gap: 5px;
+}
+
+.box {
+    background-color: rgb(68, 172, 203);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 200px;
+    border: 1px solid #000;
+}
+@media (max-width: 1181px) {
+    .Text{
+        margin-left: 20px;
+    }
+}
+
+@media (min-width: 992px) {
+    .Text {
+    
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+    }
+    
+}
+@media (min-width: 768px) and (max-width: 991px) {
+    .Text {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+    }
+}
+
